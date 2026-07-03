@@ -1,19 +1,19 @@
 
-const products = [
+export const products = [
 
     
 
+       // {
+        //id: '01',
+        //name: "Carpa 3 estaciones",
+        //price: 100,
+        //description: "Carpa de 3 estaciones, ideal para camping en verano e invierno",
+        //category: "camping",
+        //stock: 10,
+        //img: "/camping-inicial.jpg"
+    //},
         {
-        id: '01',
-        name: "Carpa 3 estaciones",
-        price: 100,
-        description: "Carpa de 3 estaciones, ideal para camping en verano e invierno",
-        category: "camping",
-        stock: 10,
-        img: "/camping-inicial.jpg"
-    },
-        {
-        id: '02',
+        //id: '02',
         name: "Aislante termico",
         price: 100,
         description: "Aislante térmico de alta calidad",
@@ -22,7 +22,7 @@ const products = [
         img: "/aislante-termico.jpeg"
     },
         {
-        id: '03',
+        //id: '03',
         name: "Colchon Autoinflable",
         price: 100,
         description: "olchon autoinflable para camping",
@@ -31,7 +31,7 @@ const products = [
         img: "/colchon-autoinflable.jpeg"
     },
         {
-        id: '04',
+        //id: '04',
         name: "Sleeping Bags",
         price: 100,
         description: "Bolsa de dormir para camping",
@@ -40,7 +40,7 @@ const products = [
         img: "/sleeping-bags.jpeg"
     },
        {
-        id: '05',
+        //id: '05',
         name: "Mesa plegable",
         price: 100,
         description: "Mesa plegable para camping",
@@ -49,7 +49,7 @@ const products = [
         img: "/mesa-plegable.jpeg"
     },
         {
-        id: '06',
+        //id: '06',
         name: "Banquito trípode",
         price: 100,
         description: "Banquito trípode para camping",
@@ -58,7 +58,7 @@ const products = [
         img: "/banquito-tripode.jpeg"
     },
         {
-        id: '07',
+        //id: '07',
         name: "Silla plegable",
         price: 100,
         description: "Silla plegable para camping",
@@ -67,7 +67,7 @@ const products = [
         img: "/silla-plegable.jpeg"
     },
         {
-        id: '08',
+        //id: '08',
         name: "Guinda ropa portatil",
         price: 100,
         description: "Guinda ropa portatil para camping",
@@ -76,7 +76,7 @@ const products = [
         img: "/guinda-ropa-portatil.jpeg"
     },
         {
-        id: '09',
+        //id: '09',
         name: "Ventilador portatil",
         price: 100,
         description: "Ventilador portatil para camping",
@@ -85,7 +85,7 @@ const products = [
         img: "/ventilador-portatil.jpeg"
     },
         {
-        id: '10',
+        //id: '10',
         name: "Bolsos impermeables de 3L",
         price: 100,
         description: "Bolsos impermeables de 3L para camping",
@@ -94,7 +94,7 @@ const products = [
         img: "/bolso-impermeable-verde.jpeg"
     },
        {
-        id: '11',
+        //id: '11',
         name: "Bolsos impermeables de 5L",
         price: 100,
         description: "Bolsos impermeables de 5L para camping",
@@ -103,7 +103,7 @@ const products = [
         img: "/bolso-impermeable-azul.jpeg"
     },
        {
-        id: '12',
+        //id: '12',
         name: "Bolsos impermeables de 15L",
         price: 100,
         description: "Bolsos impermeables de 15L para camping",
@@ -112,7 +112,7 @@ const products = [
         img: "/bolso-impermeable-amarillo.jpeg"
     },
      {
-        id: '13',
+        //id: '13',
         name: "Bolso de 60L",
         price: 100,
         description: "Bolso de 60L para senderismo",
@@ -121,7 +121,7 @@ const products = [
         img: "/bolso-60l.jpeg"
     },
      {
-        id: '14', 
+        //id: '14', 
         name: "Bolso de 20L",
         price: 100,
         description: "Bolso de 20L para senderismo",
@@ -130,7 +130,7 @@ const products = [
         img: "/bolso-20l.jpeg"
     },
        {
-        id: '15',
+        //id: '15',
         name: "Bastones de trekking",
         price: 100,
         description: "Bastones de trekking para senderismo",
@@ -139,7 +139,7 @@ const products = [
         img: "/bastones.jpeg"
     },
           {
-        id: '16',
+        //id: '16',
         name: "Linterna frontal",
         price: 100,
         description: "Linterna frontal para senderismo",
@@ -148,7 +148,7 @@ const products = [
         img: "/linterna-frente.jpeg"
     },
        {
-        id: '17',
+        //id: '17',
         name: "Kit de supervivencia",
         price: 100,
         description: "Kit de supervivencia para senderismo",

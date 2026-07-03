@@ -1,10 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import formulario from "./Formulario";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 
 const CartView = () => {
-    const {cart, clearCart, removeItem, totalPrice} = useContext(CartContext);
+    const {cart, clearCart, removeItem, totalPrice, totalQty} = useContext(CartContext);
     return (
         <div>
             <h1>Carrito de compras </h1>
@@ -22,10 +24,13 @@ const CartView = () => {
                         ))
                     }
                 </div>
-                <span>Total a pagar: ${totalPrice}</span>
+                <span style={{textAlign:'center'}}>Total a pagar: ${totalPrice()}</span>
+                <div>
+                <span style={{textAlign:'center'}}>Unidades Totales: {totalQty()}</span>
+                </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '80%', padding: '2rem' }}>
-                    <button className="btn btn-danger" onClick={clearCart}>Vaciar carrito</button>
-                    <button className="btn btn-success">Finalizar compra</button>
+                    <button className="btn btn-danger" onClick={() => clearCart()}>Vaciar carrito</button>
+                    <Link to="/formulario" className="btn btn-success">Finalizar compra</Link>
                 </div>
         </div>
     )

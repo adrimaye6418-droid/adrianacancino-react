@@ -4,6 +4,7 @@ import ItemListContainer from './components/ItemListContainer'
 import Card from './components/Card'
 import Item from './components/Item'
 import ItemList from './components/ItemList'
+import Formulario from './components/Formulario'
 import ItemDetailContainer from './components/ItemDetailContainer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
@@ -26,6 +27,7 @@ function App() {
          <Route path='/category/:type' element={<ItemListContainer/>} />
          <Route path='/item/:id' element={<ItemDetailContainer />} />
          <Route path='/cart' element={<CartContainer />} />
+         <Route path='/formulario' element={<Formulario />} />
          <Route path='*' element={<Error />} />
         </Routes>
     </div>

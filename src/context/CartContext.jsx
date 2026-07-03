@@ -49,18 +49,19 @@ export const CartProvider = ({children}) => {
 
 
         //retornar el precio total de los productos en el carrito (sumando el precio por la cantidad de cada producto)
-    const getTotalPrice = () => {
+    const totalPrice = () => {
+        console.log(totalPrice)
         return cart.reduce((total, prod) => total += (prod.price * prod.quantity), 0);
     }
 
               //retornar la cantidad total de productos en el carrito (sumando las cantidades de cada producto)
-    const getTotalQty = () => {
+    const totalQty = () => {
         return cart.reduce((total, prod) => total += prod.quantity, 0);
     }
 
 
     return (
-        <CartContext.Provider value={{cart, addItem, clearCart, removeItem, getTotalPrice, getTotalQty}}>
+        <CartContext.Provider value={{cart, addItem, clearCart, removeItem, totalPrice, totalQty}}>
            {children}
         </CartContext.Provider>
     )

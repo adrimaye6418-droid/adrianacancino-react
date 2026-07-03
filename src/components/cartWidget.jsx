@@ -9,7 +9,7 @@ const CartWidget = () => {
     return (
         <div className="cart-widget">
             <FaCartArrowDown fontSize="24px"  color="white"/>
-            {cart.length > 0 && <Badge bg="danger">{totalQty}</Badge>}
+            {cart.length > 0 && <Badge bg="danger">{totalQty()}</Badge>}
         </div>
     )
 }
