@@ -38,13 +38,6 @@ const ItemListContainer = () => {
             
         }, [type])
 
-    //const subirData = () => {
-       // console.log('subir data')
-        //const colSub = collection(db, "rutasport")
-        //products.map((prod) => {
-        //    addDoc(colSub, prod)
-        //})
-        //}
         
     return (
         <>

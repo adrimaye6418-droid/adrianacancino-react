@@ -5,7 +5,6 @@ import { CartContext } from "../context/CartContext";
 
 const CartWidget = () => {
     const { cart, totalQty } = useContext(CartContext);
-    console.log(cart, 'contexto del carrito');
     return (
         <div className="cart-widget">
             <FaCartArrowDown fontSize="24px"  color="white"/>

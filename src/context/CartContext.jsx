@@ -50,7 +50,6 @@ export const CartProvider = ({children}) => {
 
         //retornar el precio total de los productos en el carrito (sumando el precio por la cantidad de cada producto)
     const totalPrice = () => {
-        console.log(totalPrice)
         return cart.reduce((total, prod) => total += (prod.price * prod.quantity), 0);
     }
 
