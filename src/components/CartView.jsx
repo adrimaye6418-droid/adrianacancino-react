@@ -20,10 +20,8 @@ const CartView = () => {
   confirmButtonText: "Si!"
 }).then((result) => {
   if (result.isConfirmed){
-    clearCart()}
-  });
+    clearCart()}});
 };
-    
     return (
         <div>
             <h1>Carrito de compras </h1>

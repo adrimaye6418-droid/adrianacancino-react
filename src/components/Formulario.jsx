@@ -55,8 +55,8 @@ const Formulario = () => {
       
           <form className='p-4 border rounded shadow-sm bg-light' onSubmit={handleSubmit(terminarCompra)}>
             <input className='form-control' type='text' placeholder='Ingresa nombre y apellido completo'  name='name' {...register("name", {required:true, minLength:3})}  />
-            {errors?.name?.type === "required" && <span style={{color:'red'}}>Complete este campo</span>}
-            {errors?.name?.type === "minLength" && <span style={{color:'red'}}>El nombre debe contener mínimo 3 caracteres</span>}
+            {errors?.name?.type === "required" && <small style={{color:'red'}}>Complete este campo</small>}
+            {errors?.name?.type === "minLength" && <small style={{color:'red'}}>El nombre debe contener mínimo 3 caracteres</small>}
             
             <input className="form-control" type="text" placeholder="Dirección" name='address' {...register("address", {required:true, minLength:3, maxLength:34})}/>
             {errors?.address?.type === "required" && <small style={{color:'red'}}>Complete este campo</small>}
@@ -71,7 +71,10 @@ const Formulario = () => {
             <input className="form-control" type="email" placeholder="Correo electrónico" name='mail' {...register("mail", {required:true, minLength:3})} />
             {errors?.mail?.type === "required" && <small style={{color:'red'}}>Complete este campo</small>}
             
-            <input className="form-control" type="email" placeholder="Repetir correo electrónico" name='secundmail'  />
+            <input className="form-control" type="email" placeholder="Repetir correo electrónico" name='secundmail' 
+            {...register("secundmail", {required:true, validate:{equalsMails: mail2 => mail2 === getValues().mail}})}  />
+                    {errors?.secundmail?.type === "required" && <small style={{color:'red'}}>Complete este campo</small>}
+                    {errors?.secundmail?.type === "equalsMails" && <small style={{color:'red'}}>Los correos no coinciden</small>}
             <button  type="submit" className='btn btn-success' disabled={loading} >{loading ? 'Cargando compra...' : 'Terminar compra'}</button>
         </form>
         
@@ -85,4 +88,3 @@ const Formulario = () => {
 }
 
 export default Formulario;
-

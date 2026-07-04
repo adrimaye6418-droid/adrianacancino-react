@@ -9,28 +9,18 @@ import { products } from "../mock/asyncData"
 
 
 const ItemListContainer = () => {
-
     const[data, setData] = useState([])
-
     const [loader, setLoader] = useState(false)
-    
     const { type } = useParams()    
-
-            //FIREBASE
         useEffect(() => {
             setLoader(true)
-            //1. conectarnos a la base de datos / o conectar con query
             const collectionRef = type? query(collection(db, "rutasport"), where("category", "==", type)) : collection(db, "rutasport")
-
-            //2. traer los documentos de la coleccion
             getDocs(collectionRef)
             .then((res) => {
-                //Limpio la informacion
                 const list = res.docs.map((doc) => {
                     return { id: doc.id, ...doc.data()
                     }
                 })
-                //guardo los datos en el estado
                 setData(list)
             })
             .catch((error) => console.log(error))
@@ -45,9 +35,7 @@ const ItemListContainer = () => {
             loader ? <LoaderComponent  text={type? `Cargando categoria...` : 'Cargando productos...'}/> 
             :<div>   
          <h1>{type && <span style={{textTransform: 'capitalize'}}>{type}</span>}</h1>
-         //Despues lo borro, es solo para subir la data a firebase
-        {/*<button onClick={subirData}>Subir data</button>*/}
-         <ItemList data={data}/>
+            <ItemList data={data}/>
          
         </div>
         }
